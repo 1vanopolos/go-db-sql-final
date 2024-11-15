@@ -50,9 +50,9 @@ func TestAddGetDelete(t *testing.T) {
 	// get
 	// получите только что добавленную посылку, убедитесь в отсутствии ошибки
 	// проверьте, что значения всех полей в полученном объекте совпадают со значениями полей в переменной parcel
-	p, err := store.Get(number)
+	get, err := store.Get(number)
 	require.NoError(t, err)
-	require.Equal(t, p)
+	require.Equal(t, parcel.Number)
 	// delete 
 	// удалите добавленную посылку, убедитесь в отсутствии ошибки
 	// проверьте, что посылку больше нельзя получить из БД
