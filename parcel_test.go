@@ -53,7 +53,7 @@ func TestAddGetDelete(t *testing.T) {
 	p, err := store.Get(number)
 	require.NoError(t, err)
 	require.Equal(t, p)
-	// delete
+	// delete 
 	// удалите добавленную посылку, убедитесь в отсутствии ошибки
 	// проверьте, что посылку больше нельзя получить из БД
 	p, err := store.Delete(parcel.Number)
